@@ -67,7 +67,6 @@ public class SimpleSudokuSolver {
         boolean solvable = random.nextBoolean();
 
         if (solvable) {
-            // Create a solvable puzzle by solving a board and then removing numbers
             solve(board);
             for (int i = 0; i < 40; i++) {
                 int row = random.nextInt(size);
@@ -75,7 +74,6 @@ public class SimpleSudokuSolver {
                 board[row][col] = 0;
             }
         } else {
-            // Create an unsolvable puzzle by placing numbers randomly
             for (int i = 0; i < 20; i++) {
                 int row = random.nextInt(size);
                 int col = random.nextInt(size);
